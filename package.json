@@ -1,0 +1,36 @@
+{
+  "name": "@roadiehq/backstage-entity-validator",
+  "version": "0.5.1",
+  "author": "RoadieHQ",
+  "description": "Backstage entity validator",
+  "main": "dist/index.js",
+  "license": "Apache-2.0",
+  "private": false,
+  "homepage": "https://github.com/RoadieHQ/backstage-entity-validator",
+  "bugs": {
+    "url": "https://github.com/RoadieHQ/backstage-entity-validator/issues",
+    "email": "support@roadie.io"
+  },
+  "repository": "https://github.com/RoadieHQ/backstage-entity-validator",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "validate-entity": "./bin/bev"
+  },
+  "scripts": {
+    "validate": "node src/index.js",
+    "prepare": "ncc build src/index.js -o dist --source-map --license licenses.txt",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.1",
+    "jest": "^29.7.0"
+  },
+  "keywords": [
+    "backstage",
+    "validation",
+    "linting",
+    "roadie"
+  ]
+}
